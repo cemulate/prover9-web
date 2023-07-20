@@ -1,4 +1,4 @@
-import 'bulma/css/bulma.min.css';
+import 'purecss/build/pure-min.css';
 import './app.css';
 import App from './App.svelte';
 
