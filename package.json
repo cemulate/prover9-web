@@ -16,7 +16,6 @@
         "prettier-plugin-svelte": "^2.10.1",
         "purecss": "^3.0.0",
         "svelte": "^4.0.3",
-        "vite": "^4.4.0",
-        "vite-plugin-arraybuffer": "^0.0.2"
+        "vite": "^4.4.0"
     }
 }

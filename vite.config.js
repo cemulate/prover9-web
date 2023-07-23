@@ -1,8 +1,11 @@
 import { defineConfig } from 'vite';
 import { svelte } from '@sveltejs/vite-plugin-svelte';
-import arraybuffer from 'vite-plugin-arraybuffer';
+import rawHexLoader from './src/lib/raw-hex-loader.js';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-    plugins: [svelte(), arraybuffer()],
+    plugins: [svelte(), rawHexLoader],
+    worker: {
+        plugins: [rawHexLoader],
+    },
 });

@@ -9,7 +9,8 @@
 // -sEXPORTED_RUNTIME_METHODS=['callMain']
 import Prover9 from './prover9.js';
 
-import wasmBinary from '../assets/prover9.wasm?arraybuffer';
+import wasmBinaryHex from '../assets/prover9.wasm?raw-hex';
+const wasmBinary = Uint8Array.from(wasmBinaryHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
 
 function* iterateChars(s) {
     let i = 0;
