@@ -8,4 +8,5 @@ export default defineConfig({
     worker: {
         plugins: [rawHexLoader],
     },
+    base: '/prover9-web/',
 });
