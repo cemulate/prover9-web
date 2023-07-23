@@ -3,8 +3,10 @@ import baBasis from '../assets/example-input/ba-basis.txt?raw';
 const defaultFiles = [{ name: 'Boolean Algebra 1-basis', input: baBasis, outputLines: [], lastInput: null }];
 
 function loadFiles() {
+    let data = localStorage.getItem('files');
+    if (data == null) return defaultFiles;
     try {
-        return JSON.parse(localStorage.getItem('files'));
+        return JSON.parse(data);
     } catch {
         return defaultFiles;
     }
