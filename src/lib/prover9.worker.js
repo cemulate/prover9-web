@@ -25,10 +25,11 @@ function accumulateIntoLines(lineCallback) {
     let curLine = '';
     return charCode => {
         let ch = String.fromCharCode(charCode);
-        curLine += ch;
         if (ch == '\n') {
             lineCallback(curLine);
             curLine = '';
+        } else {
+            curLine += ch;
         }
     };
 }
